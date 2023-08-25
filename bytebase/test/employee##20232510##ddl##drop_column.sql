@@ -1,1 +1,1 @@
-ALTER TABLE employee add country VARCHAR(255);
+ALTER TABLE employee drop column country;
