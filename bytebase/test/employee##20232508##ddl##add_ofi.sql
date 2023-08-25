@@ -1,1 +1,1 @@
-ALTER TABLE employee add email VARCHAR(255);
+ALTER TABLE employee add district VARCHAR(255);
