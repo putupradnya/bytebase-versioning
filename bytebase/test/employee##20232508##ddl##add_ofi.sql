@@ -1,0 +1,1 @@
+ALTER TABLE employee add email VARCHAR(255);
