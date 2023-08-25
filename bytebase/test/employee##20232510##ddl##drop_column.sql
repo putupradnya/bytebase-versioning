@@ -1,0 +1,1 @@
+ALTER TABLE employee add country VARCHAR(255);
