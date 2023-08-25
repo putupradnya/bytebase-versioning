@@ -1,0 +1,1 @@
+ALTER TABLE employee add city VARCHAR(255);
