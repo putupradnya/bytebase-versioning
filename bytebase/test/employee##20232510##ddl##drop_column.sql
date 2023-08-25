@@ -1,1 +1,0 @@
-ALTER TABLE employee drop column country;
