@@ -60,7 +60,6 @@ CREATE TABLE public.employee (
     gender text NOT NULL,
     hire_date date NOT NULL,
     email character varying(255),
-    country character varying(255),
     CONSTRAINT employee_gender_check CHECK ((gender = ANY (ARRAY['M'::text, 'F'::text])))
 );
 
