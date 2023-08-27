@@ -57,10 +57,8 @@ CREATE TABLE public.employee (
     birth_date date NOT NULL,
     first_name text NOT NULL,
     last_name text NOT NULL,
-    gender text NOT NULL,
     hire_date date NOT NULL,
-    email character varying(255),
-    CONSTRAINT employee_gender_check CHECK ((gender = ANY (ARRAY['M'::text, 'F'::text])))
+    email character varying(255)
 );
 
 CREATE SEQUENCE public.employee_emp_no_seq
