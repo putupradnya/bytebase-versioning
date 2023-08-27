@@ -1,2 +1,1 @@
-ALTER TABLE employee drop column gender
-DROP TABLE salary;
+ALTER TABLE employee drop column gender;
