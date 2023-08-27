@@ -71,13 +71,6 @@ CREATE SEQUENCE public.employee_emp_no_seq
 
 ALTER SEQUENCE public.employee_emp_no_seq OWNED BY public.employee.emp_no;
 
-CREATE TABLE public.salary (
-    emp_no integer NOT NULL,
-    amount integer NOT NULL,
-    from_date date NOT NULL,
-    to_date date NOT NULL
-);
-
 CREATE TABLE public.title (
     emp_no integer NOT NULL,
     title text NOT NULL,
@@ -102,9 +95,6 @@ ALTER TABLE ONLY public.dept_manager
 ALTER TABLE ONLY public.employee
     ADD CONSTRAINT employee_pkey PRIMARY KEY (emp_no);
 
-ALTER TABLE ONLY public.salary
-    ADD CONSTRAINT salary_pkey PRIMARY KEY (emp_no, from_date);
-
 ALTER TABLE ONLY public.title
     ADD CONSTRAINT title_pkey PRIMARY KEY (emp_no, title, from_date);
 
@@ -119,9 +109,6 @@ ALTER TABLE ONLY public.dept_manager
 
 ALTER TABLE ONLY public.dept_manager
     ADD CONSTRAINT dept_manager_emp_no_fkey FOREIGN KEY (emp_no) REFERENCES public.employee(emp_no) ON DELETE CASCADE;
-
-ALTER TABLE ONLY public.salary
-    ADD CONSTRAINT salary_emp_no_fkey FOREIGN KEY (emp_no) REFERENCES public.employee(emp_no) ON DELETE CASCADE;
 
 ALTER TABLE ONLY public.title
     ADD CONSTRAINT title_emp_no_fkey FOREIGN KEY (emp_no) REFERENCES public.employee(emp_no) ON DELETE CASCADE;
